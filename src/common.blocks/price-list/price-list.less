@@ -1,0 +1,74 @@
+@import (reference) "../../less/variables.less";
+
+.price-list {
+  padding: 27px 0 143px;
+
+  @media @desktop {
+    padding: 44px 0 56px;
+  }
+  
+}
+
+.price-list__title {
+  margin: 0 0 24px;
+  @media @desktop {
+    margin: 0 0 32px;
+  }
+}
+
+.price-list__text {
+  margin: 0 0 24px;
+  font-size: 14px;
+  @media @desktop {
+    width: 936px;
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.price-list__table-wrap {
+  position: relative;
+  height: 960px;
+  overflow-x: scroll;
+  margin-right: -16px;
+
+  @media (min-width: 1645px) {
+    overflow-x: visible;
+    margin-right: 0;
+    &::after {
+      position: absolute;
+      content: "Наши цены";
+      top: 215px;
+      right: -315px;
+      color: #858585;
+      font-size: 96px;
+      line-height: 100px;
+      font-weight: 700;
+      opacity: 0.1;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.price-list__table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1410px;
+}
+
+.price-list__btn {
+  width: 240px;
+  margin: 24px auto;
+
+  @media @desktop {
+    margin: 32px auto;
+  }
+}
+
+.price-list__price {
+  width: 155px;
+  display: block;
+  margin: 0 auto;
+}

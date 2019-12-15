@@ -1,0 +1,56 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  font: inherit;
+  margin-bottom: 24px;
+  border: 1px solid #858585;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 8px 10px;
+  &:hover,
+  &:focus {
+    border-color: #FFB71B;
+    outline: none;
+  }
+  &:invalid:focus:not(:placeholder-shown) {
+    border-color: #EB4C47;
+  }
+  &--textarea {
+    margin-bottom: 8px;
+    resize: none;
+  }
+}
+
+.form__text {
+  font-size: 12px;
+  line-height: 16px;
+  max-width: 280px;
+}
+
+.form__input-file {
+  margin: 24px 0;
+  cursor: pointer;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.form__btn-submit {
+  margin-bottom: 16px;
+}
+
+.form__text__submit {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.form__submit-rule-link {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}

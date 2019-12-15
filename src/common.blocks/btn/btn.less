@@ -1,0 +1,38 @@
+@import (reference) '../../less/variables.less';
+
+.btn {
+  display: block;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+  transition: 0.2s linear;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: @color-text;
+  background-color: #FFB71B;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 8px 25px;
+  border-radius: 24px;
+  transition: opacity, background-color 0.2s;
+
+  &:hover {
+    background-color: #FFDC5E;
+  }
+
+  &:focus {
+    background-color: #FFDC5E;
+  }
+
+  &:active {
+    background-color: #FFB71B;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}

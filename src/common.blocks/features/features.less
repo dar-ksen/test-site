@@ -1,0 +1,142 @@
+@import (reference) "../../less/variables.less";
+
+.features {
+  background-color: #fff;
+  padding: 56px 0;
+
+  @media @desktop {
+    padding: 88px 0;
+  }
+}
+
+.features__title {
+  margin: 0;
+}
+
+.features__list {
+  position: relative;
+  margin: 0 -16px;
+  padding: 0;
+
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: 1500px) {
+    &::after {
+      position: absolute;
+      content: "Преимущества";
+      top: 322px;
+      right: -405px;
+      color: #858585;
+      font-size: 96px;
+      line-height: 100px;
+      font-weight: 700;
+      opacity: 0.1;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.features__item {
+  position: relative;
+  background-color: #F3F3F3;
+  box-sizing: border-box;
+  padding: 24px 28px 24px 72px;
+  margin: 16px 16px 0;
+  width: 288px;
+  min-height: 148px;
+  transition: background-color 0.2s;
+
+  &::before {
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: -6px;
+    width: 68px;
+    height: 68px;
+    border: 6px solid #ffb71b;
+    background: #ffffff no-repeat center center;
+  }
+
+  &--quality::before {
+    background-image: url("./quality.svg");
+  }
+
+  &--gost::before {
+    background-image: url("./gost.svg");
+  }
+
+  &--certificate::before {
+    background-image: url("./certificate.svg");
+  }
+
+  &--efficiency::before {
+    background-image: url("./efficiency.svg");
+  }
+
+  &--discounts::before {
+    background-image: url("./discounts.svg");
+  }
+
+  &--warranty::before {
+    background-image: url("./warranty.svg");
+  }
+
+  &--truck::before {
+    background-image: url("./truck.svg");
+  }
+
+  &--tools::before {
+    background-image: url("./tools.svg");
+  }
+
+  &--russia::before {
+    background-image: url("./russia.svg");
+  }
+  &:hover {
+    background-color: #ffb71b;
+  }
+
+  @media @desktop {
+    width: 408px;
+    margin: 24px 0 0 72px;
+    min-height: 248px;
+
+    &::before {
+      top: 36px;
+      left: -54px;
+      width: 84px;
+      height: 84px;
+      background-size: 56px auto;
+    }
+
+    &--certificate::before {
+      background-size: 45px 56px;
+    }
+  
+  }
+}
+
+.features__item-title {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 16px;
+
+  @media @desktop {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.features__item-desc {
+  font-size: 14px;
+  line-height: 20px;
+
+  @media @desktop {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

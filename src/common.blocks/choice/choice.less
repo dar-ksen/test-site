@@ -1,0 +1,74 @@
+@import (reference) "../../less/variables.less";
+
+.choice {
+  padding: 57px 0 76px;
+  background-color: #2B2831;
+  color: #ffffff;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("./tana-norway.jpg");
+
+  @media @desktop {
+    padding: 88px 0 112px;
+  }
+}
+
+.choice__container {
+  position: relative;
+
+  &::before {
+    position: absolute;
+
+
+    width: 335px;
+    height: 456px;
+    right: 0;
+    bottom: -112px;
+
+    background: center center no-repeat url("./dorozhnyj-znak-glavnaya.png");
+  }
+
+  @media @desktop {
+    &::before {
+      content: "";
+    }
+  }
+}
+
+.choice__title {
+  margin: 0 0 24px;
+
+  @media @desktop {
+    margin: 0 0 32px;
+  }
+}
+
+.choice__text {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 24px;
+
+  @media @desktop {
+    width: 576px;
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.choice__link {
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: underline;
+
+  @media @desktop {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,101 @@
+@import (reference) "../../less/variables.less";
+
+.footer {
+  padding: 32px 0 40px;
+  position: relative;
+  background: #2B2831 url('./footer-bg.jpg');
+  color: #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2B2831;
+    opacity: 0.7;
+  }
+
+  @media @desktop {
+    padding: 32px 0 122px;
+  }
+}
+
+.footer__container {
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  z-index: 10;
+  @media @desktop {
+    display: flex;
+  }
+}
+
+.footer__list {
+  margin: 0 0 40px;
+  padding: 0;
+
+  list-style: none;
+  @media @desktop {
+    margin-right: 72px;
+  }
+}
+
+.footer__item a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.footer__feedback {
+  margin: 0 0 40px;
+  @media @desktop {
+    margin: 0 175px 0 auto;
+  }
+}
+
+.footer__feedback-item {
+  margin-bottom: 16px;
+  
+}
+
+.footer__feedback-link {
+  display: block;
+}
+
+
+.footer__wrap {
+  margin-bottom: 16px;
+  @media @desktop {
+    text-align: right;
+  }
+}
+
+.footer__logo-img {
+  width: 138px;
+  height: 16px;
+
+  @media @desktop {
+    width: 309px;
+    height: 32px;
+  }
+}
+
+.footer__copyright {
+  @media @desktop {
+    margin-bottom: 82px;
+
+  }
+}
+
+.footer__develop-link {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+

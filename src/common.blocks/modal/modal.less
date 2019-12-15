@@ -1,0 +1,46 @@
+@import (reference) '../../less/variables.less';
+@import (reference) '../../less/animation.less';
+
+.modal {
+  box-sizing: border-box;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  width: 456px;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 40px 32px 60px;
+
+  animation-name: appearance;
+  animation-duration: 0.8s;
+  &--closed {
+    display: none;
+  }
+}
+
+.modal__title {
+  margin: 0 0 24px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+
+  display: block;
+
+  width: 16px;
+  height: 16px;
+  padding: 0;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  border: none;
+  background: transparent url("./cross-modal.svg");
+}
+
+.modal__text {
+  margin-bottom: 24px;
+}

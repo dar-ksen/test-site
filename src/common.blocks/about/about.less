@@ -1,0 +1,63 @@
+@import (reference) "../../less/variables.less";
+
+.about {
+  padding: 69px 0 80px;
+
+  @media @desktop {
+    padding: 88px 0 120px;
+  }
+}
+
+.about__container {
+  @media @desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.about__content-wrap {
+  @media @desktop {
+    max-width: 576px;
+    margin-right: 24px;
+  }
+}
+
+.about__title {
+  margin: 0 0 24px;
+
+  @media @desktop {
+    margin: 0 0 32px;
+  }
+}
+
+.about__text {
+  margin: 0;
+  font-size: 14px;
+  @media @desktop {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.about__img-wrap {
+  position: relative;
+  display: none;
+
+  @media @desktop {
+    display: block;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 660px;
+      height: 76px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: no-repeat center center url("./logo.svg");
+      background-size: 660px 76px;
+
+    }
+  }
+}

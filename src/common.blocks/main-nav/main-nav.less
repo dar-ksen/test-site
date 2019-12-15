@@ -1,0 +1,169 @@
+@import (reference) '../../less/variables.less';
+
+.main-nav {
+  @media @desktop {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  @media @mobile-only {
+
+    &--closed .main-nav__list,
+    &--closed .main-nav__price,
+    &--closed .main-nav__telephones {
+      display: none;
+    }
+
+    &--closed .main-nav__toggle {
+      width: 20px;
+      background-image: url("./burger.svg");
+    }
+
+    &--nojs .main-nav__list,
+    &--nojs .main-nav__price,
+    &--nojs .main-nav__telephones {
+      display: block;
+    }
+
+    &--nojs .main-nav__toggle {
+      display: none;
+    }
+
+  }
+}
+
+.main-nav__toggle {
+  display: none;
+
+  @media @mobile-only {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    padding: 0;
+
+    cursor: pointer;
+    transform: translateY(-50%);
+
+    border: none;
+    background: transparent url("./cross.svg");
+  }
+}
+
+.main-nav__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media @desktop {
+    display: flex;
+    margin-left: 24px;
+  }
+}
+
+.main-nav__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 32px;
+    left: 16px;
+
+    right: 16px;
+    height: 2px;
+
+    background: #FFB71B;
+  }
+
+  &:hover {
+    &::before {
+      content: "";
+    }
+  }
+
+  &--dropdown {
+    &::after {
+      position: absolute;
+      top: 15px;
+      left: 78px;
+
+      width: 12px;
+      height: 8px;
+
+      content: "";
+
+      background: url("./shape.svg") 0 0 no-repeat;
+    }
+
+    &-closed .main-nav__dropdown-list {
+      display: none;
+    }
+  }
+
+
+}
+
+.main-nav__link {
+  box-sizing: border-box;
+  display: block;
+  padding: 8px 0 8px 16px;
+
+  @media @desktop {
+    padding-right: 40px;
+  }
+}
+
+.main-nav__dropdown-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  background-color: @menu-background-color;
+
+  @media @desktop {
+    position: absolute;
+    top: 60px;
+  }
+}
+
+.main-nav__dropdown-link {
+  box-sizing: border-box;
+  display: block;
+  padding: 8px 36px 8px 24px;
+  transition: color, background-color 0.2s;
+
+  &:hover {
+    color: #FFB71B;
+    background-color: #3A3A47;
+  }
+
+  @media @desktop {
+    width: 392px;
+  }
+}
+
+.main-nav__price {
+  display: block;
+  margin: 32px 0 24px;
+
+  @media @desktop {
+    margin: 0 0 0 auto;
+  }
+}
+
+.main-nav__telephones {
+  padding: 0 0 32px 40px;
+
+  @media @desktop {
+    margin-left: 45px;
+    padding: 0 0 0 40px;
+  }
+}

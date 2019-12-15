@@ -1,0 +1,27 @@
+@import (reference) '../../less/variables.less';
+
+.header {
+  position: relative;
+  background-color: @menu-background-color;
+  color: #ffffff;
+}
+
+.header__wrap {
+  @media @desktop {
+    display: flex;
+    max-width: 1416px;
+    margin: 0 auto;
+  }
+}
+
+.header__logo-img {
+  padding: 20px 0 20px 16px;
+  width: 138px;
+  height: 16px;
+
+  @media @desktop {
+    width: 309px;
+    height: 32px;
+  }
+
+}

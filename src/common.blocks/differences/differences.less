@@ -1,0 +1,66 @@
+@import (reference) "../../less/variables.less";
+
+.differences {
+  padding: 56px 0;
+
+  @media @desktop {
+    padding: 88px 0;
+  }
+}
+
+.differences__container {
+  @media @desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.differences__img-wrap {
+  display: none;
+
+  @media @desktop {
+    display: block;
+    margin-right: 144px;
+  }
+}
+
+.differences__content-wrap {
+  @media @desktop {
+    width: 582px;
+  }
+}
+
+.differences__title {
+  width: 260px;
+  margin: 0 0 24px;
+  @media @desktop {
+    width: auto;
+    margin: 0 0 32px;
+  }
+}
+
+.differences__text {
+  margin: 0 0 24px;
+  font-size: 14px;
+  @media @desktop {
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.differences__link {
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: underline;
+
+  @media @desktop {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
